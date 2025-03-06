@@ -1,0 +1,61 @@
+@font-face {
+    font-family: "gramercy";
+    src: url("gramercy.woff") format("woff"),
+    font-weight: normal;
+    font-style: normal;
+}
+/* 页面全屏，背景为浅灰色 */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(240,240,240); /* 浅灰色 */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 左侧图片链接 */
+.image-link {
+    position: absolute;
+    left: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.image-link img {
+    width: 180px; /* 控制图片大小 */
+    height: auto;
+}
+
+/* 右侧文本链接 */
+.text-link {
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: "gramercy";
+    font-size: 24px;
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+
+/* 视频容器 */
+.video-container {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 视频样式 */
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 让视频填满屏幕但不变形 */
+}

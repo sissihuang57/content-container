@@ -1,0 +1,58 @@
+@font-face {
+    font-family: "gramercy";
+    src: url("gramercy.woff") format("woff"),
+    font-weight: normal;
+    font-style: normal;
+}
+/* 页面全屏，背景填充白色，隐藏默认鼠标 */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    cursor: none; /* 隐藏默认鼠标 */
+}
+/* 左侧图片链接 */
+.image-link {
+    position: absolute;
+    left: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.image-link img {
+    width: 180px; /* 控制图片大小 */
+    height: auto;
+}
+
+
+/* 右侧文本链接 */
+.text-link {
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: "gramercy";
+    font-size: 24px;
+    color: rgba(0,0,0,0.8);
+    text-decoration: underline;
+    text-decoration-color: rgba(0,0,0,0.5);
+}
+
+
+/* 悬停时颜色不变 */
+.text-link:hover {
+    color: black;
+    text-decoration-color: black;
+}
+/* 自定义鼠标 */
+#custom-cursor {
+    position: fixed;
+    width: 500px; /* 鼠标图片大小 */
+    height: 500px;
+    background: url('cursor1.jpg') no-repeat center / contain;
+    pointer-events: none; /* 让鼠标图片不会影响点击 */
+    transform: translate(-50%, -50%);
+    z-index: 9999; /* 确保鼠标图片在最前面 */
+}
