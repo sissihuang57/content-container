@@ -1,0 +1,83 @@
+/* 加载本地字体 Gramery */
+@font-face {
+    font-family: "gramercy";
+    src: url("gramercy.woff") format("woff"),
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 页面全屏，背景填充白色 */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    overflow: hidden;
+    cursor: default;
+}
+/* 主容器，水平排列 */
+.container {
+    display: flex;
+    width: 80%;
+    justify-content: space-between; /* 左右分布 */
+    align-items: center;
+}
+
+/* 左侧图片链接 */
+.image-link {
+    position: absolute;
+    left: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.image-link img {
+    width: 180px; /* 控制图片大小 */
+    height: auto;
+}
+
+/* 右侧文本链接 */
+.text-link {
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: "gramercy";
+    font-size: 24px;
+    color: rgba(0,0,0,0.8);
+    text-decoration: underline;
+    text-decoration-color: rgba(0,0,0,0.5);
+}
+
+
+/* 悬停时颜色不变 */
+.text-link:hover {
+    color: black;
+    text-decoration-color: black;
+}
+
+/* 右上角图片 */
+.top-right-image {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    width: 250px; /* 可调整大小 */
+    height: auto;
+}
+
+/* 图片样式 */
+.image {
+    position: absolute;
+    width: 150px; /* 初始宽度 */
+    height: auto;
+    opacity: 0.3; /* 初始透明度 */
+    cursor: grab; /* 鼠标悬停时可拖拽 */
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* 选中图片后 */
+.image.selected {
+    opacity: 1; /* 选中后透明度变为 100% */
+    cursor: grabbing; /* 鼠标悬停变为移动状态 */
+}

@@ -59,3 +59,12 @@ html, body {
     height: 100%;
     object-fit: cover; /* 让视频填满屏幕但不变形 */
 }
+
+/* 右上角图片 */
+.top-right-image {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    width: 270px; /* 可调整大小 */
+    height: auto;
+}
